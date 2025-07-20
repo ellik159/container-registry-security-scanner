@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  scanner:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./logs:/app/logs
+    environment:
+      - NODE_ENV=production
+      - LOG_LEVEL=info
+      - PORT=3000
+    restart: unless-stopped
+    
+  # Optional: Add a simple UI or dashboard
+  # dashboard:
+  #   image: nginx:alpine
+  #   ports:
+  #     - "8080:80"
+  #   volumes:
+  #     - ./dashboard:/usr/share/nginx/html
