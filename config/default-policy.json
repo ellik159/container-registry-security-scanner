@@ -1,0 +1,42 @@
+{
+  "name": "default-security-policy",
+  "version": "1.0",
+  "description": "Default security policy for container scanning",
+  "rules": {
+    "vulnerabilities": {
+      "maxCriticalVulns": 0,
+      "maxHighVulns": 5,
+      "maxMediumVulns": 20,
+      "maxLowVulns": 100
+    },
+    "image": {
+      "maxImageSize": 2147483648,
+      "maxImageAge": 365,
+      "requireNonRoot": true,
+      "blockedPackages": [
+        "telnet",
+        "ftp"
+      ]
+    },
+    "registry": {
+      "allowedRegistries": [
+        "docker.io",
+        "gcr.io",
+        "quay.io",
+        "ghcr.io"
+      ],
+      "requireSignature": false
+    },
+    "compliance": {
+      "requireHealthcheck": false,
+      "requireLabels": [
+        "maintainer"
+      ]
+    }
+  },
+  "actions": {
+    "onCritical": "block",
+    "onHigh": "warn",
+    "onPolicyViolation": "warn"
+  }
+}
