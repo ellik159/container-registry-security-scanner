@@ -67,7 +67,8 @@ class ImageScanner {
       
     } catch (error) {
       logger.error(`Scan failed for ${imageTag}: ${error.message}`, { stack: error.stack });
-      throw new Error(`Failed to scan image: ${error.message}`);
+      // Better error message for debugging
+      throw new Error(`Failed to scan image ${imageTag}: ${error.message}`);
     }
   }
   
