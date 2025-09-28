@@ -108,7 +108,7 @@ Tests are in `tests/` - coverage is around 60-70%, good enough for now.
 
 ## Notes
 
-The signature verification part is pretty basic right now - it just checks if a signature exists, doesn't validate the full chain. That's on the TODO list.
+The signature verification part is pretty basic right now - it just checks if a signature exists, doesn't validate the full chain. That's on the TODO list (see above).
 
 Performance is okay for most images. The sequential scanning works fine but could be faster with parallel layer analysis. Maybe later.
 
