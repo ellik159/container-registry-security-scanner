@@ -1,6 +1,6 @@
 {
   "name": "container-registry-scanner",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Security scanner for Docker container images - CVE scanning, policy enforcement, and signature verification",
   "main": "src/server.js",
   "bin": {
