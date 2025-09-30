@@ -118,4 +118,8 @@ Found a bug with RPM package parsing that took a while to fix - see commit from 
 
 ## License
 
-MIT
+MIT - see LICENSE file for details.
+
+## Contributing
+
+Feel free to open issues or PRs. Keep in mind this is a side project so responses might take a bit.
